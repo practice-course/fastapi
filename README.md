@@ -7,21 +7,21 @@ this is for test header, query parameter and path parameter with istio
 
 template
 
-        docker login ghcr.io -u USERNAME -p YOUR_PAT
+        docker login ghcr.io -u USERNAME -p YOUR_PAT ghcr.io
 
 kasus
 
-        docker login ghcr.io -u practice-course -p ********
+        docker login ghcr.io -u practice-course -p ******** ghcr.io
 
-2. build image
+2. build image (-t atau --tag)
 
 template nya
 
-        docker build -t ghcr.io/USERNAME/REPO_NAME/IMAGE_NAME:TAG .
+        docker build -t ghcr.io/USERNAME/REPO_NAME/IMAGE_NAME:TAG
 
 kasus
 
-        docker build -t ghcr.io/practice-course/fastapi/querypathparams:latest .
+        docker build -t ghcr.io/practice-course/fastapi/querypathparams:latest
 
 3. push
 
