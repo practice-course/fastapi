@@ -7,17 +7,17 @@ this is for test header, query parameter and path parameter with istio
 
 template
 
-        docker login ghcr.io -u USERNAME -p YOUR_PAT ghcr.io
+        docker login ghcr.io -u USERNAME -p YOUR_PAT
 
 kasus
 
-        docker login ghcr.io -u practice-course -p ******** ghcr.io
+        docker login ghcr.io -u practice-course -p ********
 
 2. build image (-t atau --tag)
 
 template nya
 
-        docker build -t ghcr.io/USERNAME/REPO_NAME/IMAGE_NAME:TAG
+        docker build -t ghcr.io/USERNAME/REPO_NAME/IMAGE_NAME:TAG .
 
 kasus
 
@@ -77,3 +77,11 @@ misal kita buat file publish-ghcr.yaml
 3. lakukan commit dan push ke git repo
 4. di repo pilih Actions dan lihat github sedang menjalankan ci
 
+# sumber
+## build and push image to ghcr
+https://medium.com/@deepak1812002/get-started-with-github-ghcr-an-alternative-of-dockerhub-f7d5b2198b9a
+
+https://www.youtube.com/watch?v=RgZyX-e6W9E
+
+## fastapi
+https://fastapi.tiangolo.com/deployment/docker/
