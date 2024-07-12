@@ -23,7 +23,7 @@ jobs:
       # 2. build image
       # 3. push ke ghcr
         run: | 
-          docker login ghcr.io --username practice-course --password ${{ secrets.GH_PAT }} ghcr.io
+          docker login ghcr.io -u practice-course -p ${{secrets.GH_PAT}} ghcr.io
           docker build --tag ghcr.io/practice-course/fastapi/querypathparams:latest
           docker push ghcr.io/practice-course/fastapi/querypathparams:latest
             
