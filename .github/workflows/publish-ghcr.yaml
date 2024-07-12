@@ -1,0 +1,30 @@
+# nama ci
+name: Docker build and push CI to GHCR
+
+# ketika setiap ada
+on:
+  # push 
+  push
+
+# maka lakukan pekerjaan berikut ini
+jobs:
+# pekerjaan pertama adalah build dan publish
+  build_and_publish:
+    # yang berjalan di ubuntu versi terbaru
+    runs-on: ubuntu-latest
+    # langkah yang dilakukan adalah
+    steps:
+      # 1. checkout ke repo (artinya kita pull repo/mengakses repo terbaru)
+      - uses: actions/checkout@v3
+      # 2. bernama Build and push the image
+      - name: Build and push the image
+      # akan menjalankan
+      # 1. login ke docker ghcr
+      # 2. build image
+      # 3. push ke ghcr
+        run: | 
+          docker login ghcr.io --username practice-course --password ${{ secrets.GH_PAT }} ghcr.io
+          docker build --tag ghcr.io/practice-course/fastapi/querypathparams:latest
+          docker push ghcr.io/practice-course/fastapi/querypathparams:latest
+            
+        
